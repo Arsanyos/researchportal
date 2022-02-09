@@ -1,0 +1,29 @@
+*{
+    margin:0;
+    padding:0;
+}
+.app{
+    width:auto;
+    height: auto;
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #1791D6;
+    height: 80px;
+    width:auto;
+    padding:30px;
+
+}
+.aastu-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.nav-container{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items:flex-end;
+    width:30em;
+}
