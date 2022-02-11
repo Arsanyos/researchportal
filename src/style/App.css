@@ -27,3 +27,7 @@
     align-items:flex-end;
     width:30em;
 }
+.app-content{
+    display: flex;
+    flex-direction: row;
+}
