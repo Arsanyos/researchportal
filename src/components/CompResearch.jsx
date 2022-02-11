@@ -7,7 +7,8 @@ function compResearch() {
         <h4>AASTU researchs</h4>
         <h2>Completed Research projects</h2>
       </div>
-      <table>
+      <table id="research-list">
+        {/*Center inside parent container(compResearch)*/}
         <tr>
           <th>Principal investigator</th>
           <th>Research project title</th>

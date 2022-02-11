@@ -13,6 +13,7 @@ function App() {
         <Navbar />
       </div>
       <div className="app-content">
+        {/*add padding*/}
         <FilterResearch />
         <CompResearch />
       </div>
