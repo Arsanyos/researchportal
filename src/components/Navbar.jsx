@@ -4,9 +4,10 @@ import React from "react";
 function Navbar() {
   return (
     <div className="nav-bar">
-      <div className="aastu-logo">
+      <div className="aastu">
         <img
-          src={require("../image/aastu-logo.jpg")}
+          class="aastu-logo"
+          src={require("/home/arsan/Documents/class/Intership-project/researchportal/src/image/aastu_log.png")}
           width="200px"
           height="200px"
           alt="aastu-logo"
