@@ -8,21 +8,18 @@ function Navbar() {
         <img
           class="aastu-logo"
           src={require("/home/arsan/Documents/class/Intership-project/researchportal/src/image/aastu_log.png")}
-          width="200px"
-          height="200px"
+          width="150px"
+          height="150px"
           alt="aastu-logo"
         />
         <p>Addis Ababa Science and Technology University</p>
       </div>
-      <div className="nav-container">
-        <div className="links">
-          <i class=" "></i>
-          <button className="submit" type="submit">
-            Submit
-          </button>
-        </div>
+      <div className="submit-search-container">
+        <button className="submit-research-button" type="submit">
+          Submit
+        </button>
         <div className="search-container">
-          <input type="text" placeholder="Search..." />
+          <input className="search-bar" type="text" placeholder="Search..." />
         </div>
       </div>
     </div>

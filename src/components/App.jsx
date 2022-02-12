@@ -14,12 +14,10 @@ function App() {
       </div>
       <div className="main-content">
         {/*add padding*/}
-        <div className="filter-research">
-          <FilterResearch />
-        </div>
-        <div className="comp-research">
-          <CompResearch />
-        </div>
+
+        <FilterResearch />
+
+        <CompResearch />
       </div>
     </div>
   );
