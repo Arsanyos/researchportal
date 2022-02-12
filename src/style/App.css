@@ -121,6 +121,23 @@ margin-bottom:5px;
     font-size: 25px;
     margin-bottom:10px;
 }
+#research-list{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1.16em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+#research-list thead tr {
+    background-color: #eee;
+    color: var(--color-2);
+    text-align: left;
+}
+#research-list th,
+#research-list td {
+    padding: 12px 15px;
+}
 /* filterResearch */
 .filter-research-container{
     text-align: left;
