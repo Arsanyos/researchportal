@@ -1,21 +1,19 @@
-import React from "react";
-
+import React, { useState, useEffect } from "react";
 function FilterResearch() {
+  const [years, setYears] = useState([2014, 2013, 2012, 2011, 2010]);
+  function handleYearSort(e) {}
   return (
     <div className="filter-research-container">
       <div className="date-sort-container">
         <p>Sort by date</p>
         <ul id="date-sort">
-          {/* make links appear downwards*/}
-          <li>
-            <a href="">2014</a> {/* can I add an onClick function for a link?*/}
-          </li>
-          <li>
-            <a href="">2013</a>
-          </li>
-          <li>
-            <a href="">2012</a>
-          </li>
+          {years.map((year) => {
+            return (
+              <li>
+                <span onClick={handleYearSort}>{year}</span>
+              </li>
+            );
+          })}
         </ul>
       </div>
       <div className="custom-sort-container">

@@ -18,7 +18,7 @@ function App() {
       </div>
       <div className="main-content">
         {/*add padding*/}
-        <FilterResearch />
+        <FilterResearch jsonData={jsonData} />
         <CompResearch
           researches={researches}
           pageNumber={pageNumber}

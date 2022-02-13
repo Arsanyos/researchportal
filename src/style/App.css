@@ -20,9 +20,13 @@ li{
     text-decoration: none;
     margin:5px;
 }
-a{
+span{
     text-decoration: none;
     color:var(--main-color);
+    padding:10px;
+}
+span:hover{
+    cursor: pointer;
 }
 
 h3{
