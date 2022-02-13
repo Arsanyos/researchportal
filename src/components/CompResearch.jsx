@@ -1,17 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import jsonData from "../RESEARCH_DATA.json";
 //import react-paginate
 import ReactPaginate from "react-paginate";
 
-function CompResearch() {
-  const [researches, setResearches] = useState(jsonData);
-  const [pageNumber, setPageNumber] = useState(0);
-
+function CompResearch(props) {
   const researchPerPage = 8;
-  const researchesVisited = pageNumber * researchPerPage;
-
-  const displayResearches = researches
+  const researchesVisited = props.pageNumber * researchPerPage;
+  const displayResearches = props.researches
     .slice(researchesVisited, researchesVisited + researchPerPage)
     .map((research) => {
       return (
@@ -24,11 +19,12 @@ function CompResearch() {
         </tbody>
       );
     });
-  const pageCount = Math.ceil(researches.length / researchPerPage);
 
+  const pageCount = Math.ceil(props.researches.length / researchPerPage);
   const changePage = ({ selected }) => {
-    setPageNumber(selected);
+    props.setPageNumber(selected);
   };
+
   return (
     <div className="compResearch-container">
       <div className="compResearch-container-title">
