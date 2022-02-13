@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import jsonData from "../RESEARCH_DATA.json";
 //import react-paginate
@@ -7,14 +8,14 @@ function CompResearch() {
   const [researches, setResearches] = useState(jsonData);
   const [pageNumber, setPageNumber] = useState(0);
 
-  const researchPerPage = 5;
+  const researchPerPage = 8;
   const researchesVisited = pageNumber * researchPerPage;
 
   const displayResearches = researches
     .slice(researchesVisited, researchesVisited + researchPerPage)
     .map((research) => {
       return (
-        <tbody>
+        <tbody key={research.id}>
           <tr>
             <td>{research.investegator}</td>
             <td>{research.title}</td>
@@ -23,7 +24,11 @@ function CompResearch() {
         </tbody>
       );
     });
+  const pageCount = Math.ceil(researches.length / researchPerPage);
 
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
   return (
     <div className="compResearch-container">
       <div className="compResearch-container-title">
@@ -43,6 +48,19 @@ function CompResearch() {
         </thead>
         {displayResearches}
       </table>
+      <div className="pagination">
+        <ReactPaginate
+          previousLabel={"Previous"}
+          nextLabel={"Next"}
+          pageCount={pageCount}
+          onPageChange={changePage}
+          containerClassName={"paginationBttns"}
+          previousLinkClassName={"previousBttn"}
+          nextLinkClassName={"nextBttn"}
+          disabledClassName={"paginationDisabled"}
+          activeClassName={"paginationActive"}
+        />
+      </div>
     </div>
   );
 }

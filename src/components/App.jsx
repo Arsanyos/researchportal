@@ -14,9 +14,7 @@ function App() {
       </div>
       <div className="main-content">
         {/*add padding*/}
-
         <FilterResearch />
-
         <CompResearch />
       </div>
     </div>
