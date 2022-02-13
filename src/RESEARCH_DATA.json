@@ -1,0 +1,38 @@
+[
+    {
+        "id":1,
+        "title":"Bio fuel combustion",
+        "investegator":"Mr. whatever",
+        "funding": "Internal"
+    },
+    {
+        "id":2,
+        "title":"Green energy computing",
+        "investegator":"Dr. yangaw",
+        "funding":"External"
+    },
+    {
+        "id":3,
+        "title":"block chemical clearance",
+        "investegator":"Dr. hmm",
+        "funding":"Internal"
+    },
+    {
+        "id":4,
+        "title":"block chemical clearance",
+        "investegator":"Dr. hmm",
+        "funding":"Internal"
+    },
+    {
+        "id":5,
+        "title":"block chemical clearance",
+        "investegator":"Dr. hmm",
+        "funding":"Internal"
+    },
+    {
+        "id":6,
+        "title":"block chemical clearance",
+        "investegator":"Dr. hmm",
+        "funding":"Internal"
+    }
+]

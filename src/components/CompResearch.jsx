@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import jsonData from "../RESEARCH_DATA.json";
+//import react-paginate
+import ReactPaginate from "react-paginate";
 
-function compResearch() {
+function CompResearch() {
+  const [researches, setResearches] = useState(jsonData);
   return (
     <div className="compResearch-container">
       <div className="compResearch-container-title">
@@ -11,7 +15,6 @@ function compResearch() {
       </div>
 
       <table id="research-list">
-        {/*Center inside parent container(compResearch)*/}
         <thead>
           <tr>
             <th>Principal investigator</th>
@@ -19,15 +22,19 @@ function compResearch() {
             <th>Funding source</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>Zelalem desalge</td>
-            <td>Assesment of AI in agriculture</td>
-            <td>Internal</td>
-          </tr>
-        </tbody>
+        {researches.map((research) => {
+          return (
+            <tbody>
+              <tr>
+                <td>{research.investegator}</td>
+                <td>{research.title}</td>
+                <td>{research.funding}</td>
+              </tr>
+            </tbody>
+          );
+        })}
       </table>
     </div>
   );
 }
-export default compResearch;
+export default CompResearch;
