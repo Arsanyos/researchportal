@@ -1,0 +1,22 @@
+[
+    {
+        "id":"1",
+        "collegeTitle":"College of Electrical and Mechanical Engineering"
+    },
+    {
+        "id":"2",
+        "collegeTitle":"College of Architecture and Civil Engineering"
+    },
+    {
+        "id":"3",
+        "collegeTitle":"College of Applied Science"
+    },
+    {
+        "id":"4",   
+        "collegeTitle":"College of Biological and Chemical Engineering"
+    },
+    {
+        "id":"5",
+        "collegeTitle":"College of Natural and Soical Sciences"
+    }
+]

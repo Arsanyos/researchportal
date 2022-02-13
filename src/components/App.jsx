@@ -13,9 +13,6 @@ function App() {
   const [pageNumber, setPageNumber] = useState(0);
   const [tempYear, settempYear] = useState(0);
 
-  useEffect(() => {
-    console.log(sortedResearches);
-  }, [sortedResearches]);
   return (
     <div className="app">
       <div className="nav">
@@ -24,9 +21,9 @@ function App() {
       <div className="main-content">
         <FilterResearch
           researches={researches}
-          jsonData={jsonData}
           tempYear={tempYear}
           settempYear={settempYear}
+          sortedResearches={sortedResearches}
           setsortedResearches={setsortedResearches}
         />
         <CompResearch

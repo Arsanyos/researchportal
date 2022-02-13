@@ -1,13 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React, { cloneElement, useState } from "react";
+import collegeData from "../COLLEGES_DATA.json";
+var _ = require("lodash");
+
 function FilterResearch(props) {
+  const [cData, setcData] = useState(collegeData);
   const [years, setYears] = useState([2014, 2013, 2012, 2011, 2010]);
+  // -------
   function handleYearSort(e) {
     let newData = [];
-    // console.log(e.target.innerText);
     newData = props.researches.filter(
       (data) => data.yearPublished === e.target.innerText
     );
     props.setsortedResearches(newData);
+    console.log(props.sortedResearches);
+  }
+  function handleCollegeSort(e) {
+    let Data = [];
+    Data = props.researches.filter(
+      (data) => data.collegeSubmitedTo === _.lowerCase(e.target.innerText)
+    );
+    props.setsortedResearches(Data);
   }
   return (
     <div className="filter-research-container">
@@ -35,15 +47,15 @@ function FilterResearch(props) {
         <div className="college-sort-container">
           <p className="college-sort-title">Sort by college</p>
           <ul id="college-sort">
-            <li>
-              <a href="">College of Architecture and Civil Engineering</a>
-            </li>
-            <li>
-              <a href="">College of Applied Science</a>
-            </li>
-            <li>
-              <a href="">College of Biological and Chemical Engineering</a>
-            </li>
+            {cData.map((college) => {
+              return (
+                <li key={college.id}>
+                  <span onClick={handleCollegeSort}>
+                    {college.collegeTitle}
+                  </span>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>

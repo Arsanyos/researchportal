@@ -197,9 +197,17 @@ margin-bottom:5px;
 }
 .college-sort-container{
     margin-top:50px;
+    text-align: left;
 }
 #college-sort{
    text-align: left;
+}
+#college-sort li{
+    margin:10px;
+    margin-left:0px;
+}
+#college-sort span{
+    padding-left: 0px;
 }
 .custom-sort-container{
     margin-top:30px;

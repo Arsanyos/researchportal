@@ -5,7 +5,7 @@
         "investegator":"Mr. whatever",
         "funding": "Internal",
         "yearPublished":"2006",
-        "collegeSubmitedTo":"college of electrical and mechinical college"
+        "collegeSubmitedTo":"college of electrical and mechanical engineering"
     },
     {
         "id":2,
@@ -21,70 +21,62 @@
         "investegator":"Dr. hmm",
         "funding":"Internal",
         "yearPublished":"2010",
-        "collegeSubmitedTo":"college of biochemical and chemical engineering"
+        "collegeSubmitedTo":"college of biological and chemical engineering"
     },
     {
         "id":4,
-        "title":"block chemical clearance",
-        "investegator":"Dr. hmm",
+        "title":"Nuclear war",
+        "investegator":"Dr. ummmma",
         "funding":"Internal",
         "yearPublished":"2015",
-        "collegeSubmitedTo":"college of biochemical and chemical engineering"
+        "collegeSubmitedTo":"college of biological and chemical engineering"
     },
     {
         "id":5,
-        "title":"block chemical clearance",
-        "investegator":"Dr. hmm",
+        "title":"Reusable components",
+        "investegator":"Dr. lacy",
         "funding":"Internal",
         "yearPublished":"2001",
-        "collegeSubmitedTo":"college of biochemical and chemical engineering"
+        "collegeSubmitedTo":"college of electrical and chemical engineering"
     },
     {
         "id":7,
-        "title":"block chemical clearance nuclear war",
-        "investegator":"Dr. blahblah",
+        "title":"muckaro putrynamo",
+        "investegator":"Dr. shifga",
         "funding":"Internal",
         "yearPublished":"2013",
-        "collegeSubmitedTo":"college of biochemical and chemical engineering"
+        "collegeSubmitedTo":"college of applied science"
     },
     {
         "id":8,
-        "title":"block chemical clearance",
+        "title":"mario came back",
         "investegator":"Dr. moww",
         "funding":"Internal",
         "yearPublished":"2010",
-        "collegeSubmitedTo":"college of biochemical and chemical engineering"
+        "collegeSubmitedTo":"college of electrical and mechanical engineering"
     },
     {
         "id":9,
-        "title":"block chemical clearance",
-        "investegator":"Dr. bark",
+        "title":"war in europe due to",
+        "investegator":"Dr. jiko",
         "funding":"Internal",
         "yearPublished":"2013",
-        "collegeSubmitedTo":"college of biochemical and chemical engineering"
+        "collegeSubmitedTo":"college of biological and chemical engineering"
     },
     {
         "id":10,
         "title":"block chemical clearance  tenthhh",
-        "investegator":"Dr. meow",
+        "investegator":"Dr. bucholo",
         "funding":"Internal",
         "yearPublished":"2009",
-        "collegeSubmitedTo":"college of biochemical and chemical engineering"
+        "collegeSubmitedTo":"college of architecture and civil engineering"
     },
     {
         "id":11,
-        "title":"block chemical clearance",
+        "title":"block mewo mewo",
         "investegator":"Dr. hmm",
         "funding":"Internal",
         "yearPublished":"2019",
-        "collegeSubmitedTo":"college of biochemical and chemical engineering"
-    },
-    {
-        "id":12,
-        "title":"block chemical clearance twelevee",
-        "investegator":"Dr. hmm",
-        "funding":"Internal",
-        "yearPublished":"2010",
-        "collegeSubmitedTo":"college of biochemical and chemical engineering"
+        "collegeSubmitedTo":"college of applied science"
     }
 ]
