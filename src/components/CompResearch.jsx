@@ -5,6 +5,25 @@ import ReactPaginate from "react-paginate";
 
 function CompResearch() {
   const [researches, setResearches] = useState(jsonData);
+  const [pageNumber, setPageNumber] = useState(0);
+
+  const researchPerPage = 5;
+  const researchesVisited = pageNumber * researchPerPage;
+
+  const displayResearches = researches
+    .slice(researchesVisited, researchesVisited + researchPerPage)
+    .map((research) => {
+      return (
+        <tbody>
+          <tr>
+            <td>{research.investegator}</td>
+            <td>{research.title}</td>
+            <td>{research.funding}</td>
+          </tr>
+        </tbody>
+      );
+    });
+
   return (
     <div className="compResearch-container">
       <div className="compResearch-container-title">
@@ -22,17 +41,7 @@ function CompResearch() {
             <th>Funding source</th>
           </tr>
         </thead>
-        {researches.map((research) => {
-          return (
-            <tbody>
-              <tr>
-                <td>{research.investegator}</td>
-                <td>{research.title}</td>
-                <td>{research.funding}</td>
-              </tr>
-            </tbody>
-          );
-        })}
+        {displayResearches}
       </table>
     </div>
   );
