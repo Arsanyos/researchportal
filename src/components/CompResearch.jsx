@@ -6,7 +6,7 @@ import ReactPaginate from "react-paginate";
 function CompResearch(props) {
   const researchPerPage = 8;
   const researchesVisited = props.pageNumber * researchPerPage;
-  const displayResearches = props.researches
+  const displayResearches = props.sortedResearches
     .slice(researchesVisited, researchesVisited + researchPerPage)
     .map((research) => {
       return (
@@ -33,7 +33,6 @@ function CompResearch(props) {
           Completed Research projects
         </p>
       </div>
-
       <table id="research-list">
         <thead>
           <tr>

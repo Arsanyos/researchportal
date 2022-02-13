@@ -4,87 +4,87 @@
         "title":"Bio fuel combustion",
         "investegator":"Mr. whatever",
         "funding": "Internal",
-        "year-published":"2006",
-        "college-sbumited-to":"college of electrical and mechinical college"
+        "yearPublished":"2006",
+        "collegeSubmitedTo":"college of electrical and mechinical college"
     },
     {
         "id":2,
         "title":"Green energy computing",
         "investegator":"Dr. yangaw",
         "funding":"External",
-        "year-published":"2009",
-        "college-sbumited-to":"college of applied science"
+        "yearPublished":"2009",
+        "collegeSubmitedTo":"college of applied science"
     },
     {
         "id":3,
         "title":"block chemical clearance",
         "investegator":"Dr. hmm",
         "funding":"Internal",
-        "year-published":"2010",
-        "college-sbumited-to":"college of biochemical and chemical engineering"
+        "yearPublished":"2010",
+        "collegeSubmitedTo":"college of biochemical and chemical engineering"
     },
     {
         "id":4,
         "title":"block chemical clearance",
         "investegator":"Dr. hmm",
         "funding":"Internal",
-        "year-published":"2015",
-        "college-sbumited-to":"college of biochemical and chemical engineering"
+        "yearPublished":"2015",
+        "collegeSubmitedTo":"college of biochemical and chemical engineering"
     },
     {
         "id":5,
         "title":"block chemical clearance",
         "investegator":"Dr. hmm",
         "funding":"Internal",
-        "year-published":"2001",
-        "college-sbumited-to":"college of biochemical and chemical engineering"
+        "yearPublished":"2001",
+        "collegeSubmitedTo":"college of biochemical and chemical engineering"
     },
     {
         "id":7,
         "title":"block chemical clearance nuclear war",
         "investegator":"Dr. blahblah",
         "funding":"Internal",
-        "year-published":"2013",
-        "college-sbumited-to":"college of biochemical and chemical engineering"
+        "yearPublished":"2013",
+        "collegeSubmitedTo":"college of biochemical and chemical engineering"
     },
     {
         "id":8,
         "title":"block chemical clearance",
         "investegator":"Dr. moww",
         "funding":"Internal",
-        "year-published":"2010",
-        "college-sbumited-to":"college of biochemical and chemical engineering"
+        "yearPublished":"2010",
+        "collegeSubmitedTo":"college of biochemical and chemical engineering"
     },
     {
         "id":9,
         "title":"block chemical clearance",
         "investegator":"Dr. bark",
         "funding":"Internal",
-        "year-published":"2013",
-        "college-sbumited-to":"college of biochemical and chemical engineering"
+        "yearPublished":"2013",
+        "collegeSubmitedTo":"college of biochemical and chemical engineering"
     },
     {
         "id":10,
         "title":"block chemical clearance  tenthhh",
         "investegator":"Dr. meow",
         "funding":"Internal",
-        "year-published":"2009",
-        "college-sbumited-to":"college of biochemical and chemical engineering"
+        "yearPublished":"2009",
+        "collegeSubmitedTo":"college of biochemical and chemical engineering"
     },
     {
         "id":11,
         "title":"block chemical clearance",
         "investegator":"Dr. hmm",
         "funding":"Internal",
-        "year-published":"2019",
-        "college-sbumited-to":"college of biochemical and chemical engineering"
+        "yearPublished":"2019",
+        "collegeSubmitedTo":"college of biochemical and chemical engineering"
     },
     {
         "id":12,
         "title":"block chemical clearance twelevee",
         "investegator":"Dr. hmm",
         "funding":"Internal",
-        "year-published":"2010",
-        "college-sbumited-to":"college of biochemical and chemical engineering"
+        "yearPublished":"2010",
+        "collegeSubmitedTo":"college of biochemical and chemical engineering"
     }
 ]

@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react";
-function FilterResearch() {
+function FilterResearch(props) {
   const [years, setYears] = useState([2014, 2013, 2012, 2011, 2010]);
-  function handleYearSort(e) {}
+  function handleYearSort(e) {
+    let newData = [];
+    // console.log(e.target.innerText);
+    newData = props.researches.filter(
+      (data) => data.yearPublished === e.target.innerText
+    );
+    props.setsortedResearches(newData);
+  }
   return (
     <div className="filter-research-container">
       <div className="date-sort-container">
