@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import jsonData from "../RESEARCH_DATA.json";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 //importing components
+import Home from "./Home";
+import Submit from "../routes/Submit";
 import CompResearch from "./CompResearch.jsx";
 import FilterResearch from "./FilterResearch.jsx";
 import Navbar from "./Navbar.jsx";
@@ -20,18 +22,14 @@ function App() {
         <Navbar jsonData={jsonData} setsortedResearches={setsortedResearches} />
       </div>
       <div className="main-content">
-        <FilterResearch
+        <Home
           researches={researches}
-          tempYear={tempYear}
-          settempYear={settempYear}
           sortedResearches={sortedResearches}
           setsortedResearches={setsortedResearches}
-        />
-        <CompResearch
-          sortedResearches={sortedResearches}
-          researches={researches}
           pageNumber={pageNumber}
           setPageNumber={setPageNumber}
+          tempYear={tempYear}
+          settempYear={settempYear}
         />
       </div>
     </div>
