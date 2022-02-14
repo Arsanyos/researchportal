@@ -1,5 +1,6 @@
 import React from "react";
-//importing images
+//components
+import SearchBar from "./SearchBar";
 
 function Navbar() {
   return (
@@ -27,9 +28,10 @@ function Navbar() {
             Submit
           </button>
         </div>
-        <div className="search-container">
-          <input className="search-bar" type="text" placeholder="Search..." />
-        </div>
+        <SearchBar
+          placeholder="Search.."
+          onChange={(e) => console.log(e.target.value)}
+        />
       </div>
     </div>
   );

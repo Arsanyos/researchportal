@@ -69,29 +69,32 @@ margin-bottom:5px;
 }
 .icon-button-container{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 15em;
 }
+
+/* search-bar */
+
+.search-container{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.submit-search{
+    color:black;
+    position: relative;
+    right:40px;
+    top:3px;
+}
 .search-bar{
-  font-size:16px;
-  padding:7px;
-  border-radius:10px;
-
-  background-image: url( //addsearch.com/logo/AAAAAA-20.png );
-  background-repeat: no-repeat;
-  background-position: 95%;
-
-  border: 0px;
+    border: 0px;
+    outline: none;
+    padding: 8px;
+    border-radius: 15px;
 }
 .search-bar:focus{
-    outline:none;
-}
-.submit-search-container{
-    display: flex;
-    flex-direction: column;
-    margin-right:70px;
-    align-items:flex-end;
-    width:15em;
+    outline: none;
+    background-color: antiquewhite;
 }
 
 .main-content{
@@ -215,3 +218,4 @@ margin-bottom:5px;
 .custom-sort-title{
     margin-bottom:10px;
 }
+/* ------------- */
