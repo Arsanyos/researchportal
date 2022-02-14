@@ -35,29 +35,17 @@ function FilterResearch(props) {
           })}
         </ul>
       </div>
-      <div className="custom-sort-container">
-        <p className="custom-sort-title">Custom range</p>
-        <div className="sort-container">
-          <input className="sort-year" type="number" />
-          -
-          <input className="sort-year" type="number" />
-          <br />
-          <button className="search-sort">search</button>
-        </div>
-        <div className="college-sort-container">
-          <p className="college-sort-title">Sort by college</p>
-          <ul id="college-sort">
-            {cData.map((college) => {
-              return (
-                <li key={college.id}>
-                  <span onClick={handleCollegeSort}>
-                    {college.collegeTitle}
-                  </span>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+      <div className="college-sort-container">
+        <p className="college-sort-title">Sort by college</p>
+        <ul id="college-sort">
+          {cData.map((college) => {
+            return (
+              <li key={college.id}>
+                <span onClick={handleCollegeSort}>{college.collegeTitle}</span>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </div>
   );

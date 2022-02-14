@@ -12,7 +12,7 @@ function CompResearch(props) {
       return (
         <tbody key={research.id}>
           <tr>
-            <td>{research.investegator}</td>
+            <td>{research.author.firstName}</td>
             <td>{research.title}</td>
             <td>{research.funding}</td>
           </tr>

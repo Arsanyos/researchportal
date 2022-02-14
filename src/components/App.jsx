@@ -6,17 +6,17 @@ import FilterResearch from "./FilterResearch.jsx";
 import Navbar from "./Navbar.jsx";
 //importing style
 import "../style/App.css";
+//importing fuse.js
 
 function App() {
   const [researches, setResearches] = useState(jsonData);
   const [sortedResearches, setsortedResearches] = useState(researches);
   const [pageNumber, setPageNumber] = useState(0);
   const [tempYear, settempYear] = useState(0);
-
   return (
     <div className="app">
       <div className="nav">
-        <Navbar />
+        <Navbar jsonData={jsonData} setsortedResearches={setsortedResearches} />
       </div>
       <div className="main-content">
         <FilterResearch
@@ -27,6 +27,7 @@ function App() {
           setsortedResearches={setsortedResearches}
         />
         <CompResearch
+          {...sortedResearches}
           sortedResearches={sortedResearches}
           researches={researches}
           pageNumber={pageNumber}

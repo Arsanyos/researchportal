@@ -1,8 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 //components
 import SearchBar from "./SearchBar";
+//importing fuse
+import Fuse from "fuse.js";
 
-function Navbar() {
+function Navbar({
+  jsonData,
+  searchedData,
+  setsearchedData,
+  setsortedResearches,
+}) {
+  const [data, setData] = useState(jsonData);
+  const searchData = (pattern) => {
+    if (!pattern) {
+      setData(jsonData);
+      return;
+    }
+    const fuse = new Fuse(data, {
+      keys: ["title", "collegeSubmitedTo", "author.firstName"],
+    });
+    const result = fuse.search(pattern);
+    const matches = [];
+    if (!result.length) {
+      setData([]);
+    } else {
+      result.forEach(({ item }) => {
+        matches.push(item);
+      });
+      setData(matches);
+      setsortedResearches(data);
+    }
+  };
   return (
     <div className="nav-bar">
       <div className="aastu">
@@ -30,7 +58,7 @@ function Navbar() {
         </div>
         <SearchBar
           placeholder="Search.."
-          onChange={(e) => console.log(e.target.value)}
+          onChange={(e) => searchData(e.target.value)}
         />
       </div>
     </div>

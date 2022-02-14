@@ -2,7 +2,9 @@
     {
         "id":1,
         "title":"Bio fuel combustion",
-        "investegator":"Mr. whatever",
+        "author":{ 
+            "firstName":"Negatu",
+            "lastName":"Tesema"},
         "funding": "Internal",
         "yearPublished":"2006",
         "collegeSubmitedTo":"college of electrical and mechanical engineering"
@@ -10,7 +12,7 @@
     {
         "id":2,
         "title":"Green energy computing",
-        "investegator":"Dr. yangaw",
+        "author":{ "firstName":"Mulata","lastName":"woo"},
         "funding":"External",
         "yearPublished":"2009",
         "collegeSubmitedTo":"college of applied science"
@@ -18,7 +20,7 @@
     {
         "id":3,
         "title":"block chemical clearance",
-        "investegator":"Dr. hmm",
+        "author":{ "firstName":"Balko","lastName":"Tesema"},
         "funding":"Internal",
         "yearPublished":"2010",
         "collegeSubmitedTo":"college of biological and chemical engineering"
@@ -26,7 +28,7 @@
     {
         "id":4,
         "title":"Nuclear war",
-        "investegator":"Dr. ummmma",
+        "author":{ "firstName":"hyunk","lastName":"Tesema"},
         "funding":"Internal",
         "yearPublished":"2015",
         "collegeSubmitedTo":"college of biological and chemical engineering"
@@ -34,7 +36,7 @@
     {
         "id":5,
         "title":"Reusable components",
-        "investegator":"Dr. lacy",
+        "author":{ "firstName":"Styu","lastName":"Tesema"},
         "funding":"Internal",
         "yearPublished":"2001",
         "collegeSubmitedTo":"college of electrical and chemical engineering"
@@ -42,7 +44,7 @@
     {
         "id":7,
         "title":"muckaro putrynamo",
-        "investegator":"Dr. shifga",
+        "author":{ "firstName":"liopa","lastName":"Tesema"},
         "funding":"Internal",
         "yearPublished":"2013",
         "collegeSubmitedTo":"college of applied science"
@@ -50,7 +52,7 @@
     {
         "id":8,
         "title":"mario came back",
-        "investegator":"Dr. moww",
+        "author":{ "firstName":"yuio","lastName":"Tesema"},
         "funding":"Internal",
         "yearPublished":"2010",
         "collegeSubmitedTo":"college of electrical and mechanical engineering"
@@ -58,7 +60,7 @@
     {
         "id":9,
         "title":"war in europe due to",
-        "investegator":"Dr. jiko",
+        "author":{ "firstName":"bflkr","lastName":"Tesema"},
         "funding":"Internal",
         "yearPublished":"2013",
         "collegeSubmitedTo":"college of biological and chemical engineering"
@@ -66,7 +68,7 @@
     {
         "id":10,
         "title":"block chemical clearance  tenthhh",
-        "investegator":"Dr. bucholo",
+        "author":{ "firstName":"Negatu","lastName":"Tesema"},
         "funding":"Internal",
         "yearPublished":"2009",
         "collegeSubmitedTo":"college of architecture and civil engineering"
@@ -74,7 +76,7 @@
     {
         "id":11,
         "title":"block mewo mewo",
-        "investegator":"Dr. hmm",
+        "author":{ "firstName":"Negatu","lastName":"Tesema"},
         "funding":"Internal",
         "yearPublished":"2019",
         "collegeSubmitedTo":"college of applied science"
