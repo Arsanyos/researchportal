@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import jsonData from "../RESEARCH_DATA.json";
+
 //importing components
 import CompResearch from "./CompResearch.jsx";
 import FilterResearch from "./FilterResearch.jsx";
@@ -27,7 +28,6 @@ function App() {
           setsortedResearches={setsortedResearches}
         />
         <CompResearch
-          {...sortedResearches}
           sortedResearches={sortedResearches}
           researches={researches}
           pageNumber={pageNumber}

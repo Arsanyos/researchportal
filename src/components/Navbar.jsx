@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 //components
 import SearchBar from "./SearchBar";
 //importing fuse
@@ -45,16 +46,21 @@ function Navbar({
       </div>
       <div className="submit-search-container">
         <div className="icon-button-container">
-          <img
-            className="home-icon"
-            src={require("/home/arsan/Documents/class/Intership-project/researchportal/src/image/home.png")}
-            width="30px"
-            height="30px"
-            alt="home-icon"
-          />
-          <button className="submit-research-button" type="submit">
-            Submit
-          </button>
+          <Link to="/">
+            <img
+              className="home-icon"
+              src={require("/home/arsan/Documents/class/Intership-project/researchportal/src/image/home.png")}
+              width="30px"
+              height="30px"
+              alt="home-icon"
+            />
+          </Link>
+
+          <Link to="/submit">
+            <button className="submit-research-button" type="submit">
+              Submit
+            </button>
+          </Link>
         </div>
         <SearchBar
           placeholder="Search.."
