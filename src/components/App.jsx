@@ -4,8 +4,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 //importing components
 import Home from "./Home";
 import Submit from "../routes/Submit";
-import CompResearch from "./CompResearch.jsx";
-import FilterResearch from "./FilterResearch.jsx";
 import Navbar from "./Navbar.jsx";
 //importing style
 import "../style/App.css";
@@ -17,22 +15,38 @@ function App() {
   const [pageNumber, setPageNumber] = useState(0);
   const [tempYear, settempYear] = useState(0);
   return (
-    <div className="app">
-      <div className="nav">
-        <Navbar jsonData={jsonData} setsortedResearches={setsortedResearches} />
+    <BrowserRouter>
+      <div className="app">
+        <div className="nav">
+          <Navbar
+            jsonData={jsonData}
+            setsortedResearches={setsortedResearches}
+          />
+        </div>
+        <div className="main-content">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Home
+                  researches={researches}
+                  sortedResearches={sortedResearches}
+                  setsortedResearches={setsortedResearches}
+                  pageNumber={pageNumber}
+                  setPageNumber={setPageNumber}
+                  tempYear={tempYear}
+                  settempYear={settempYear}
+                />
+              }
+            />
+            <Route
+              path="/submit"
+              element={<Submit researches={researches} />}
+            />
+          </Routes>
+        </div>
       </div>
-      <div className="main-content">
-        <Home
-          researches={researches}
-          sortedResearches={sortedResearches}
-          setsortedResearches={setsortedResearches}
-          pageNumber={pageNumber}
-          setPageNumber={setPageNumber}
-          tempYear={tempYear}
-          settempYear={settempYear}
-        />
-      </div>
-    </div>
+    </BrowserRouter>
   );
 }
 export default App;
