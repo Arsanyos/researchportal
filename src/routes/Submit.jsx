@@ -1,25 +1,32 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+
 const initialValues = {
   email: "",
   firstName: "",
   lastName: "",
 };
-const submitFormSchema = Yup.object().shape({
+const schema = Yup.object().shape({
   email: Yup.string().email().required("Email is required"),
   firstName: Yup.string()
+    .matches(/\b[^\d\W]+\b/g, "invalid firstName")
     .required("first name is required")
     .max(15, "first name is to long"),
+  lastName: Yup.string()
+    .matches(/\b[^\d\W]+\b/g, "invalid lastName")
+    .required("last name is required")
+    .max(15, "last name is to long"),
 });
 
 function Submit({ jsonData, setsortedResearches, researches }) {
   return (
     <Formik
       initialValues={initialValues}
-      validationSchema={submitFormSchema}
+      validationSchema={schema}
+      //cast objects to a defined schema
       onSubmit={(values) => {
-        console.log(values);
+        console.log(values.email);
       }}
     >
       {(formik) => {
