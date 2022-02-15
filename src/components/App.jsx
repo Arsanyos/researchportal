@@ -41,7 +41,13 @@ function App() {
             />
             <Route
               path="/submit"
-              element={<Submit researches={researches} />}
+              element={
+                <Submit
+                  jsonData={jsonData}
+                  researches={researches}
+                  sortedResearches={sortedResearches}
+                />
+              }
             />
           </Routes>
         </div>
