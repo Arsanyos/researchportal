@@ -1,22 +1,36 @@
 import React from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { render } from "react-dom";
+import { Formik, Form, Field, ErrorMessage, FormikProps } from "formik";
 import * as Yup from "yup";
 
+import cData from "../COLLEGES_DATA.json";
 const initialValues = {
   email: "",
   firstName: "",
   lastName: "",
+  title: "",
+  abstract: "",
+  file: null,
 };
+
 const schema = Yup.object().shape({
   email: Yup.string().email().required("Email is required"),
   firstName: Yup.string()
-    .matches(/\b[^\d\W]+\b/g, "invalid firstName")
-    .required("first name is required")
-    .max(15, "first name is to long"),
+    .matches(/\b[^\d\W]+\b/g, "Invalid firstName")
+    .required("First name is required")
+    .max(15, "First name is to long"),
   lastName: Yup.string()
-    .matches(/\b[^\d\W]+\b/g, "invalid lastName")
-    .required("last name is required")
-    .max(15, "last name is to long"),
+    .matches(/\b[^\d\W]+\b/g, "Invalid lastName")
+    .required("Last name is required")
+    .max(15, "Last name is to long"),
+  title: Yup.string()
+    .matches(/\b[^\d\W]+\b/g, "Invalid title")
+    .required("Title of research to be submitted is required")
+    .max(15, "Title is to long"),
+  abstract: Yup.string()
+    .required("Title of research to be submitted is required")
+    .max(30, "Abstract should atleast be more than 50 words."),
+  file: Yup.mixed().required(),
 });
 
 function Submit({ jsonData, setsortedResearches, researches }) {
@@ -26,7 +40,7 @@ function Submit({ jsonData, setsortedResearches, researches }) {
       validationSchema={schema}
       //cast objects to a defined schema
       onSubmit={(values) => {
-        console.log(values.email);
+        console.log(values);
       }}
     >
       {(formik) => {
@@ -34,6 +48,7 @@ function Submit({ jsonData, setsortedResearches, researches }) {
           values,
           handleChange,
           handleSubmit,
+          setFieldValue,
           errors,
           touched,
           handleBlur,
@@ -97,7 +112,76 @@ function Submit({ jsonData, setsortedResearches, researches }) {
                   className="error"
                 />
               </div>
+              <div className="form-row">
+                <label htmlFor="title">Title</label>
+                <Field
+                  type="title"
+                  name="title"
+                  id="title"
+                  value={values.title}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  className={
+                    errors.title && touched.title ? "input-error" : null
+                  }
+                />
+                <ErrorMessage name="title" component="span" className="error" />
+              </div>
+              <div className="form-row">
+                <label htmlFor="abstract">Abstract</label>
+                <Field
+                  type="abstract"
+                  name="abstract"
+                  id="abstract"
+                  value={values.abstract}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  className={
+                    errors.abstract && touched.abstract ? "input-error" : null
+                  }
+                />
+                <ErrorMessage
+                  name="abstract"
+                  component="span"
+                  className="error"
+                />
+              </div>
+              <div className="form-row">
+                <label htmlFor="college">Select college</label>
 
+                <Field as="select" name="colleges">
+                  <option value="College of Electrical and Mechanical Engineering">
+                    College of Electrical and Mechanical Engineering
+                  </option>
+                  <option value="College of Architecture and Civil Engineering">
+                    College of Architecture and Civil Engineering
+                  </option>
+                  <option value="College of Applied Science">
+                    College of Applied Science
+                  </option>
+                  <option value="College of Natural and Soical Sciences">
+                    College of Natural and Soical Sciences
+                  </option>
+                </Field>
+
+                <ErrorMessage
+                  name="abstract"
+                  component="span"
+                  className="error"
+                />
+              </div>
+              <div className="form-row">
+                <label for="file">File upload</label>
+                <input
+                  id="file"
+                  name="file"
+                  type="file"
+                  onChange={(event) => {
+                    setFieldValue("file", event.currentTarget.files[0]);
+                  }}
+                  className="form-control"
+                />
+              </div>
               <button
                 type="submit"
                 className={dirty && isValid ? "" : "disabled-btn"}
