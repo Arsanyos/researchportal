@@ -10,7 +10,7 @@ function CompResearch(props) {
     .slice(researchesVisited, researchesVisited + researchPerPage)
     .map((research) => {
       return (
-        <tbody key={research.id}>
+        <tbody>
           <tr>
             <td>{research.author.firstName}</td>
             <td>{research.title}</td>

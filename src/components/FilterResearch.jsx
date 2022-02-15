@@ -29,7 +29,9 @@ function FilterResearch(props) {
           {years.map((year) => {
             return (
               <li>
-                <span onClick={handleYearSort}>{year}</span>
+                <span className="years" onClick={handleYearSort}>
+                  {year}
+                </span>
               </li>
             );
           })}

@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { render } from "react-dom";
 import { Formik, Form, Field, ErrorMessage, FormikProps } from "formik";
 import * as Yup from "yup";
-
-import cData from "../COLLEGES_DATA.json";
+import subrData from "../SUBMITTED_RESEARCH_DATA.json";
 const initialValues = {
   email: "",
   firstName: "",
@@ -25,8 +24,8 @@ const schema = Yup.object().shape({
     .max(15, "Last name is to long"),
   title: Yup.string()
     .matches(/\b[^\d\W]+\b/g, "Invalid title")
-    .required("Title of research to be submitted is required")
-    .max(15, "Title is to long"),
+    .required("Title of research to be submitted is required"),
+
   abstract: Yup.string()
     .required("Title of research to be submitted is required")
     .max(30, "Abstract should atleast be more than 50 words."),
@@ -40,7 +39,26 @@ function Submit({ jsonData, setsortedResearches, researches }) {
       validationSchema={schema}
       //cast objects to a defined schema
       onSubmit={(values) => {
+        // values are in javascript object format
         console.log(values);
+        let firstName = values.firstName;
+        let lastName = values.lastName;
+        let email = values.email;
+        let file = values.file;
+        let title = values.title;
+        let abstract = values.abstract;
+        let collegeSubmitedTo = values.colleges;
+        let object = {
+          email: email,
+          title: title,
+          author: {
+            firstName: firstName,
+            lastName: lastName,
+          },
+          collegeSubmitedTo: collegeSubmitedTo,
+          file: file.relativePath,
+        };
+        alert("Research submitted for evalution");
       }}
     >
       {(formik) => {
@@ -57,11 +75,13 @@ function Submit({ jsonData, setsortedResearches, researches }) {
         } = formik;
         return (
           <div className="container">
-            <h1>Sign in to continue</h1>
             <form onSubmit={handleSubmit}>
+              <h1>Submit research</h1>
               <div className="form-row">
                 <label htmlFor="email">Email</label>
+                <br />
                 <Field
+                  placeHolder="Email"
                   type="email"
                   name="email"
                   id="email"
@@ -72,11 +92,14 @@ function Submit({ jsonData, setsortedResearches, researches }) {
                     errors.email && touched.email ? "input-error" : null
                   }
                 />
+                <br />
                 <ErrorMessage name="email" component="span" className="error" />
               </div>
               <div className="form-row">
                 <label htmlFor="firstName">First Name</label>
-                <input
+                <br />
+                <Field
+                  placeHolder="first name"
                   type="firstName"
                   name="firstName"
                   id="firstName"
@@ -87,6 +110,7 @@ function Submit({ jsonData, setsortedResearches, researches }) {
                     errors.firstName && touched.firstName ? "input-error" : null
                   }
                 />
+                <br />
                 <ErrorMessage
                   name="firstName"
                   component="span"
@@ -95,7 +119,9 @@ function Submit({ jsonData, setsortedResearches, researches }) {
               </div>
               <div className="form-row">
                 <label htmlFor="lastName">Last Name</label>
+                <br />
                 <Field
+                  placeHolder="last name"
                   type="lastName"
                   name="lastName"
                   id="lastName"
@@ -106,6 +132,7 @@ function Submit({ jsonData, setsortedResearches, researches }) {
                     errors.lastName && touched.lastName ? "input-error" : null
                   }
                 />
+                <br />
                 <ErrorMessage
                   name="lastName"
                   component="span"
@@ -114,7 +141,9 @@ function Submit({ jsonData, setsortedResearches, researches }) {
               </div>
               <div className="form-row">
                 <label htmlFor="title">Title</label>
+                <br />
                 <Field
+                  placeHolder="title"
                   type="title"
                   name="title"
                   id="title"
@@ -125,11 +154,15 @@ function Submit({ jsonData, setsortedResearches, researches }) {
                     errors.title && touched.title ? "input-error" : null
                   }
                 />
+                <br />
                 <ErrorMessage name="title" component="span" className="error" />
               </div>
               <div className="form-row">
                 <label htmlFor="abstract">Abstract</label>
+                <br />
                 <Field
+                  placeHolder="Enter abstract here"
+                  className="abstract-class"
                   type="abstract"
                   name="abstract"
                   id="abstract"
@@ -140,6 +173,7 @@ function Submit({ jsonData, setsortedResearches, researches }) {
                     errors.abstract && touched.abstract ? "input-error" : null
                   }
                 />
+                <br />
                 <ErrorMessage
                   name="abstract"
                   component="span"
@@ -148,7 +182,7 @@ function Submit({ jsonData, setsortedResearches, researches }) {
               </div>
               <div className="form-row">
                 <label htmlFor="college">Select college</label>
-
+                <br />
                 <Field as="select" name="colleges">
                   <option value="College of Electrical and Mechanical Engineering">
                     College of Electrical and Mechanical Engineering
@@ -163,15 +197,10 @@ function Submit({ jsonData, setsortedResearches, researches }) {
                     College of Natural and Soical Sciences
                   </option>
                 </Field>
-
-                <ErrorMessage
-                  name="abstract"
-                  component="span"
-                  className="error"
-                />
               </div>
               <div className="form-row">
                 <label for="file">File upload</label>
+                <br />
                 <input
                   id="file"
                   name="file"

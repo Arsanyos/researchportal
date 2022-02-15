@@ -58,7 +58,7 @@ function Navbar({
 
           <Link to="/submit">
             <button className="submit-research-button" type="submit">
-              Submit
+              +
             </button>
           </Link>
         </div>

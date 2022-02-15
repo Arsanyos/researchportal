@@ -106,13 +106,16 @@ margin-bottom:5px;
 }
 .submit-research-button{
     font-size:20px;
-    width:100px;
-    padding:5px;
-    border-radius: 15px;
+    width:50px;
+    padding:3px;
+    border-radius: 40px;
     border-width: 0px;
     margin-bottom:20px;
     background-color:var(--color-2);
     color:white;
+
+    position: relative;
+    right:45px;
     
 }
 .submit-research-button:hover{
@@ -212,6 +215,9 @@ margin-bottom:5px;
 #college-sort span{
     padding-left: 0px;
 }
+#date-sort li{
+    padding:7px;
+}
 .college-sort-container{
     margin-top:30px;
 }
@@ -219,3 +225,53 @@ margin-bottom:5px;
     margin-bottom:10px;
 }
 /* ------------- */
+/* submit component */
+.container{
+    display: flex;
+    flex-direction: column; 
+    max-width:30%;
+    margin:auto;
+    padding: 50px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    
+}
+.container form  h1{
+    padding-left: 0px;
+    margin-bottom: 20px;
+    color:var(--main-color);
+}
+.container .form-row{
+    margin:10px;
+}
+
+.container .form-row input{
+    
+    width:300px;
+    margin-top:10px;
+    padding:5px;
+    border-radius: 8px;
+    border-color:#ffffff;
+    box-shadow: 0 4px 8px 0 rgba(241, 235, 235, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    outline: none;
+    outline-width:none;
+}
+
+
+.container .form-row input:hover{
+    color:crimson;
+}
+.container .form-row .error{
+    color:crimson;
+}
+form button{
+    width:300px;
+    padding:10px;
+    margin-top:10px;
+    margin-left:8px;
+}
+.file-upload{
+    color:var(--main-color);
+}
